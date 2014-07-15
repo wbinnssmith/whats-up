@@ -1,0 +1,19 @@
+.Messages
+  flex: 1
+  padding: 0
+  margin: 0
+  list-style: none
+  overflow: auto
+
+.Message
+  display: flex
+  padding: 8px
+  &:nth-child(even)
+    background-color: $very-light-purple
+
+.Message-user, .Message-text
+  margin-right: 16px
+
+.Message-text
+  flex: 1
+

@@ -1,0 +1,38 @@
+{
+  "name": "whatsup",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Chat online in realtime",
+  "main": "index.jsx",
+  "author": "",
+  "license": "ISC",
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "scripts": {
+    "build": "NODE_ENV=production browserify . --extension .jsx |uglifyjs2 > static/index.js & stylus -I ./node_modules --include-css -u autoprefixer-stylus index.styl -o static",
+    "watch-js": "watchify -d --extension .jsx . -o static/index.js",
+    "watch-css": "stylus -I ./node_modules --include-css -u autoprefixer-stylus -w index.styl -o static",
+    "watch": "npm run watch-js & npm run watch-css"
+  },
+  "dependencies": {
+    "autoprefixer-stylus": "^0.1.0",
+    "body-parser": "^1.4.3",
+    "browserify": "^4.2.0",
+    "envify": "^1.2.1",
+    "express": "^4.6.0",
+    "guid": "0.0.12",
+    "jquery": "^2.1.1",
+    "moment": "^2.7.0",
+    "normalize.css": "^3.0.1",
+    "react": "^0.10.0",
+    "reactify": "^0.13.1",
+    "socket.io": "^1.0.6",
+    "socket.io-client": "^1.0.6",
+    "stylus": "^0.47.1",
+    "uglify-js": "^2.4.15",
+    "watchify": "^0.10.2"
+  }
+}
