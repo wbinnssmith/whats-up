@@ -12,3 +12,5 @@ don't go too crazy :)
 To develop, just `npm install && npm watch & node ./server.js`, and to prepare a
 minified build for production simply `npm install && npm run build`.
 
+## Screenshot
+![](https://raw.githubusercontent.com/wbinnssmith/whats-up/master/WhatUpScreenshot.jpg)
